@@ -11,6 +11,28 @@
     <title>Finish Job</title>
   </head>
   <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <!-- Brand -->
+      <a class="navbar-brand" href="index.html">B&K</a>
+      <!-- Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="newschedule.html">New Appointment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="editschedule.html">Modify Appointment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="schedules.php?filter=today">View Appointments</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="CompleteJob.html">Complete Job</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="reportexpense.html">Report Expenses</a>
+        </li>
+      </ul>
+    </nav>
     <section id="cover">
         <div id="cover-caption">
             <div id="container" class="container">
@@ -18,7 +40,7 @@
                     <div class="col-sm-6 offset-sm-3 text-center">
                         <h1 class="display-4">Mark Job As Complete</h1>
                         <div class="info-form">
-                            <form action="" class="form-inlin justify-content-center">
+                            <form action="completejob.php" method="POST" class="form-inlin justify-content-center">
                                 <div class="form-group ">
                                   <label class="control-label requiredField" for="jobid">
                                       Job ID
@@ -45,7 +67,15 @@
                                       </span>
                                   </label>
                                   <input class="form-control" id="username" name="username" placeholder="brennan" type="text" required>
-                                  <input class="form-control" id="timetocomplete" name="timetocomplete" placeholder="2" type="text" required>
+                                </div>
+                                <div class="form-group">
+                                  <label class="control-label requiredField" for="time">
+                                      Hours to complete (decimal)
+                                      <span class="asteriskField">
+                                       *
+                                      </span>
+                                  </label>
+                                  <input class="form-control" id="time" name="time" placeholder="1.5" type="text" type="number" step="0.1" required>
                                 </div>
                                 <button type="submit" class="btn btn-success ">Mark as Complete</button>
                             </form>

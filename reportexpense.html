@@ -8,8 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
-    <title>Finish Job</title>
+    <title>Report Expense</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -20,7 +19,7 @@
         <li class="nav-item">
           <a class="nav-link" href="newschedule.html">New Appointment</a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="editschedule.html">Modify Appointment</a>
         </li>
         <li class="nav-item">
@@ -29,7 +28,7 @@
         <li class="nav-item">
           <a class="nav-link" href="CompleteJob.html">Complete Job</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
             <a class="nav-link" href="reportexpense.html">Report Expenses</a>
         </li>
       </ul>
@@ -39,17 +38,35 @@
             <div id="container" class="container">
                 <div class="row text-white">
                     <div class="col-sm-6 offset-sm-3 text-center">
-                        <h1 class="display-4">Edit Appointmnt</h1>
+                        <h1 class="display-4">Report Expense</h1>
                         <div class="info-form">
-                            <form action="editschedulebyjobid.html" method="GET" class="form-inlin justify-content-center" >
+                            <form name="form" action="submitexpense.php" action="POST" class="form-inlin justify-content-center">
                                 <div class="form-group ">
-                                  <label class="control-label requiredField" for="jobid">
-                                      Job ID
+                                  <label class="control-label requiredField" for="description">
+                                      Description
                                       <span class="asteriskField">
                                        *
                                       </span>
                                  </label>
-                                 <input class="form-control" id="jobid" name="jobid" placeholder="12345" type="text" required>
+                                 <input class="form-control" id="description" name="description" placeholder="Gas" type="text" required>
+                                </div>
+                                <div class="form-group ">
+                                  <label class="control-label requiredField" for="amountPaid">
+                                      Amount Paid
+                                      <span class="asteriskField">
+                                       *
+                                      </span>
+                                  </label>
+                                  <input class="form-control" id="amountPaid" name="amountPaid" placeholder="$20" type="number" step="0.01" required>
+                                </div>
+                                <div class="form-group ">
+                                  <label class="control-label requiredField" for="username">
+                                      First Name
+                                      <span class="asteriskField">
+                                       *
+                                      </span>
+                                  </label>
+                                  <input class="form-control" id="username" name="username" placeholder="brennan" type="text" required>
                                 </div>
                                 <button type="submit" class="btn btn-success ">Submit</button>
                             </form>
@@ -74,4 +91,3 @@
      background: #454d55;
     }
 </style>
-
